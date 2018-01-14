@@ -65,10 +65,8 @@ function ready(error, before, after, recession) {
     .call(d3.axisLeft(y).tickValues([-25,0,25,50,75,100,125]))
 
   d3.selectAll("#controls input[name=mode]").on("change", function() {
-    console.log(this.value)
-    let q = g.selectAll(".quartile")
+    g.selectAll(".quartile")
       .data(this.value==="After" ? dataAfter : dataBefore)
-      // .data(dataAfter)
         .select("path")
           .transition()
           .attr("d", d => line(d.values))
