@@ -4,10 +4,24 @@
   <meta charset="utf-8"/>
 </head>
   <body>
-    <svg width="400" height="400"></svg>
+    <h1>
+      Summary Figure 2. Cumulative Growth in Average Income, by Income Group, 1979 to 2014
+    </h1>
+    <h2>
+      Percent
+    </h2>
+    <svg width="600" height="400"></svg>
     <div id="controls">
-      <input name="mode" type="radio" value="Before" id="beforeButton" checked><label for="beforeButton"> Before</label>
-      <input name="mode" type="radio" value="After" id="afterButton"><label for="afterButton"> After</label>
+      Income (<input name="mode" type="radio" value="Before" id="beforeButton" checked><label for="beforeButton">Before</label> /
+      <input name="mode" type="radio" value="After" id="afterButton"><label for="afterButton">After)</label> Transfers and Taxes
+    </div>
+    <div class="notes">
+      <p style="margin-top: 40px;">
+        Source: Congressional Budget Office (<a href="">data repository</a>).
+      </p>
+      <p>
+        "Middle Quartiles" are incomes falling between the 21st and 80th percentiles.
+      </p>
     </div>
   </body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
