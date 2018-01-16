@@ -36,6 +36,16 @@ text {
   font-weight: 700;
 }
 
+#beforeLabel {
+  color: #06576D;
+  font-weight: 700;
+}
+
+#afterLabel {
+  color: #7F2969;
+  font-weight: 700;
+}
+
 #controls {
   margin-top: 25px;
   font-size: .9rem;
