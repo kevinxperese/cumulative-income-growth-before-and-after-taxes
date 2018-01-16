@@ -6,7 +6,7 @@ const svg = d3.select("svg"),
 
 const x = d3.scaleLinear().domain([1979,2014]).range([0,width]),
       y = d3.scaleLinear().domain([125,-25]).range([0,height]),
-      colorsBefore = d3.scaleOrdinal().domain(["bottom", "middle", "top"]).range(["#59AAB2", "#2E8593", "#06576D"]),
+      colorsBefore = d3.scaleOrdinal().domain(["bottom", "middle", "top"]).range(["#9DC69D", "#82A882", "#4F844F"]),
       colorsAfter = d3.scaleOrdinal().domain(["bottom", "middle", "top"]).range(["#BA749B", "#A54E7E", "#7F2969"]),
       properLabels = d3.scaleOrdinal().domain(["bottom", "middle", "top"]).range(["Bottom Quartile", "Middle Quartiles", "Top Quartile"])
 
