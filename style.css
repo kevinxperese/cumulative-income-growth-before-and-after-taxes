@@ -45,20 +45,16 @@ text {
   position: absolute;
 }
 
-#dataLabelText {
+#dataLabelText,
+#dataLabelTextBG {
   font-weight: 700;
   text-anchor: middle;
-  /* stroke: white; */
-  /* stroke-width: 2px; */
   font-size: 1.1rem;
 }
 
 #dataLabelTextBG {
-  font-weight: 900;
-  text-anchor: middle;
   stroke: white;
   stroke-width: 4px;
-  font-size: 1.1rem;
 }
 
 .notes {
