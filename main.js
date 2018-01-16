@@ -13,9 +13,6 @@ const line = d3.line()
               .x(function(d) { return x(d.year); })
               .y(function(d) { return y(d.value); });
 
-// let tooltip = d3.select("body").append("div").attr("id", "dataLabel")
-
-
 let currentData
 
 d3.queue()
@@ -88,6 +85,7 @@ function ready(error, before, after, recession) {
   let dataLabelTextBG = g.append("text").attr("id", "dataLabelTextBG").style("opacity", 0)
   let dataLabelText = g.append("text").attr("id", "dataLabelText").style("opacity", 0)
 
+  //mouseover behavior
   svg
     .on("mousemove", function (d) {
 
@@ -98,16 +96,16 @@ function ready(error, before, after, recession) {
       if(xPos < margin.left || xPos > width + margin.left)
         return
 
+      //convert the mouseX to a year, find the data for that year from each series
       let year = Math.round(x.invert(xPos-margin.left))
-
       let seriesValuesAtSelectedDate = currentData.map( function (series) {
-
         return {
           id: series.id,
           value: series.values.filter(z => z.year===year)[0].value
         }
       })
 
+      //find the series closest to the mouse
       let mouseYValue = y.invert(yPos-margin.top)
       let closenessToMouse = 1e6
       let closestToMouse
@@ -144,10 +142,8 @@ function ready(error, before, after, recession) {
     .on("mouseout", function () {
       dataLabel
         .style("opacity", 0)
-
       dataLabelText
         .style("opacity", 0)
-
       dataLabelTextBG
         .style("opacity", 0)
     })
@@ -155,7 +151,7 @@ function ready(error, before, after, recession) {
   g.append("g")
     .attr("class", "axis axis--x")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).tickSize(-6).tickPadding(6).tickFormat(d3.format("")))
+    .call(d3.axisBottom(x).tickFormat(d3.format("")))
 
   g.append("g")
     .attr("class", "axis axis--y")

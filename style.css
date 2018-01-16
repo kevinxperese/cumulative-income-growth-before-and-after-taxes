@@ -65,6 +65,10 @@ text {
   font-size: .8rem;
 }
 
+.axis--x path{
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
