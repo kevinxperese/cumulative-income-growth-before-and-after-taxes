@@ -6,6 +6,8 @@ body {
 h1 {
   font-family: sans-serif;
   font-size: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h2 {
@@ -16,6 +18,8 @@ h2 {
 
 text {
   font-size: .9rem;
+  user-select: none;
+  pointer-events: none;
 }
 
 .line {
@@ -36,6 +40,30 @@ text {
   font-size: .9rem;
 }
 
+#dataLabel {
+  position: absolute;
+}
+
+#dataLabelText {
+  font-weight: 700;
+  text-anchor: middle;
+  /* stroke: white; */
+  /* stroke-width: 2px; */
+  font-size: 1.1rem;
+}
+
+#dataLabelTextBG {
+  font-weight: 900;
+  text-anchor: middle;
+  stroke: white;
+  stroke-width: 4px;
+  font-size: 1.1rem;
+}
+
 .notes {
   font-size: .8rem;
+}
+
+a {
+  text-decoration: none;
 }
